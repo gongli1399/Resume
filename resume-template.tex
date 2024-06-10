@@ -1,0 +1,132 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[UTF8]{ctex}
+\usepackage{array} % 用于增强表格功能
+\usepackage{makecell} % 用于创建加粗的表格横线。
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[top=0.5in, bottom=0.5in, left=0.75in, right=0.75in]{geometry} %设置页边距
+
+\pagestyle{empty} % 全部不显示页码
+
+\setCJKmainfont[ItalicFont={楷体},AutoFakeBold=2.5]{楷体} %设置中文字体为楷体
+\setmainfont{Times New Roman}[AutoFakeBold=2.5] %设置英文字体为Times New Roman
+
+% 设置itemize环境
+\setlist[itemize]{
+	topsep=0pt, % 上部分间距（列表前）
+	itemsep=-5pt, % 项目间距
+	leftmargin=*, % 左边缘（黑点）与左边界的距离为零
+	}
+
+% 设置表格格式
+\newcolumntype{?}{!{\vrule width 1pt}} % 定义新的列类型，'|' 表示加粗的竖线
+\newcommand{\thickhline}{\Xhline{2pt}} % 定义加粗横线命令
+\renewcommand{\arraystretch}{1} % 设置表格行高为默认的x倍
+
+% 创建命令，定义section标题
+\newcommand{\sectiontitle}[1]{
+	\begin{tabular*}{\textwidth}{l}
+		{\Large \textbf{#1}} \\
+		\thickhline
+	\end{tabular*}
+	\vspace{-0.8em}
+}
+
+% 创建命令，定义教育经历格式
+\newcommand{\educationsection}[4]{
+	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & \textbf{#2} \\
+		#3 & #4
+	\end{tabular*}
+}
+
+% 创建命令，定义工作经历格式
+\newcommand{\careersection}[5]{
+	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & \textbf{#2} \\
+		#3 & #4 \\
+		\multicolumn{2}{l}{#5} \\
+	\end{tabular*}
+}
+
+% 创建命令，定义专业技能格式
+\newcommand{\technicalsection}[2]{
+	\begin{tabular*}{\textwidth}{l}
+		\textbf{#1：} #2 \\
+	\end{tabular*}
+}
+
+%----------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
+
+\begin{document}
+
+
+%----------HEADING-----------------
+	
+\centering
+\begin{tabular}{c?c?c}
+	\multicolumn{3}{c}{{\LARGE \textbf{姓名}}}\\
+	Mobile: (+86)xxx-xxxx-xxxx &
+	Email: xxxxxxxxxx@163.com &
+	Address: 深圳市 \space 福田区 \\ 
+\end{tabular}
+
+\vspace{1em}
+\sectiontitle{教育经历}
+
+\educationsection{北京大学 \space 这里是学院名字}{广东省，深圳市}{专业名称及学历 \space GPA: 3.XX/4.00}{2018.09 - 2021.06}
+
+\educationsection{北京大学 \space 这里是学院名字}{北京市}{专业名称及学历 \space GPA: 3.XX/4.00}{2014.09 - 2018.06}
+
+\sectiontitle{工作经历}
+
+\careersection{一个著名公司的名字}{广东省，深圳市}{职位和职级}{2023.08 - 至今}{
+	\parbox{0.97\textwidth}{
+		\begin{itemize}
+			\item 工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容。
+			\item 工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容。
+			\item 工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容。。
+		\end{itemize}
+	}
+}
+
+\careersection{另一个著名公司的名字}{广东省，深圳市}{职位和职级}{2021.07 - 2023.07}{
+	\parbox{0.97\textwidth}{
+		\begin{itemize}
+			\item 工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容。
+			\item 工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容工作内容。
+		\end{itemize}
+	}
+}
+
+\sectiontitle{项目经历}
+
+\careersection{这是项目名字}{广东省，深圳市}{角色}{2023.08 - 2023.12}{
+	\parbox{0.97\textwidth}{
+		\begin{itemize}
+			\item 项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容。
+		\end{itemize}
+	}
+}
+
+\careersection{这是项目名字}{广东省，深圳市}{角色}{2023.01 - 2023.03}{
+	\parbox{0.97\textwidth}{
+		\begin{itemize}
+			\item 项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容。
+		\end{itemize}
+	}
+}
+
+
+\sectiontitle{专业技能}
+
+\technicalsection{计算机}{Python, Excel (VBA), Wind, iFind, Bloomberg, Latex}
+\technicalsection{语言}{CET-6}
+\technicalsection{职业资格}{证券从业资格，基金从业资格，证券投资顾问}
+
+
+%----------ENDING-----------------
+\end{document}

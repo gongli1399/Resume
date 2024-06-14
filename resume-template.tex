@@ -5,6 +5,7 @@
 \usepackage{makecell} % 用于创建加粗的表格横线。
 \usepackage{multicol}
 \usepackage{enumitem}
+\usepackage{graphicx} % 用于插入图片
 \usepackage[top=0.5in, bottom=0.5in, left=0.75in, right=0.75in]{geometry} %设置页边距
 
 \pagestyle{empty} % 全部不显示页码
@@ -65,16 +66,28 @@
 
 
 %----------HEADING-----------------
-	
-\centering
-\begin{tabular}{c?c?c}
-	\multicolumn{3}{c}{{\LARGE \textbf{姓名}}}\\
-	Mobile: (+86)xxx-xxxx-xxxx &
-	Email: xxxxxxxxxx@163.com &
-	Address: 深圳市 \space 福田区 \\ 
-\end{tabular}
 
-\vspace{1em}
+\centering
+
+\begin{figure}
+	\begin{minipage}[h]{0.85\textwidth} 
+		\flushright
+		\begin{tabular}{c?c?c}
+			\multicolumn{3}{c}{{\LARGE \textbf{姓名}}} \\
+			{\small Mobile: (+86)xxx-xxxx-xxxx} &
+			{\small Email: xxxxxxxxxx@163.com} &
+			{\small Address: 深圳市 \space 福田区} \\ 
+		\end{tabular}
+		\vspace{-2em}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[h]{0.14\textwidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{photo_5_7} % 插入照片
+		\vspace{-2em}
+	\end{minipage}
+\end{figure}
+
 \sectiontitle{教育经历}
 
 \educationsection{北京大学 \space 这里是学院名字}{广东省，深圳市}{专业名称及学历 \space GPA: 3.XX/4.00}{2018.09 - 2021.06}
@@ -115,7 +128,7 @@
 \careersection{这是项目名字}{广东省，深圳市}{角色}{2023.01 - 2023.03}{
 	\parbox{0.97\textwidth}{
 		\begin{itemize}
-			\item 项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容。
+			\item 项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容项目内容。
 		\end{itemize}
 	}
 }
@@ -124,7 +137,6 @@
 \sectiontitle{专业技能}
 
 \technicalsection{计算机}{Python, Excel (VBA), Wind, iFind, Bloomberg, Latex}
-\technicalsection{语言}{CET-6}
 \technicalsection{职业资格}{证券从业资格，基金从业资格，证券投资顾问}
 
 
